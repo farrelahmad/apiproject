@@ -17,12 +17,12 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('stories');
-            $table->unsignedBigInteger('bookwriter');
+            $table->unsignedBigInteger('storiewriter');
             $table->timestamps();
 
 
             $table->softDeletes();
-            $table->foreign('bookwriter')->references('id')->on('users');
+            $table->foreign('storiewriter')->references('id')->on('users');
         });
     }
 
